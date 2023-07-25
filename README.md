@@ -11,14 +11,11 @@ According to Malcolm Gladwell, he said, "It takes 10,000 hours to become an expe
 ## DAY 40 (PERCENTILE OF CONTINUOUS VALUE FUNCTION)
 Percentile from statistics is used to explain how a value compares to the entire values of a population. It is normally expressed in whole numbers between 0 and 100. It has no universal definition, but it is used to express the percentage of numbers below the value. If for example, a student's exam score is the 75th percentile, it means he scores rank above 75% of the class.
 In the context of SQL, the percentile function is of three types depending on what we aim to achieve.
-### <ins>PERCENT_RANK<ins>
-This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
+**PERCENT_RANK:** This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
 
-### <ins>PERCENTILE-CONT<ins>
-This function calculates the specified percentile (continuous value) for a group (partition) based on the specified ORDER BY clause. It returns the value that represents the specified percentile within each partition (i.e., what the value ought to be).
+**PERCENTILE-CONT:** This function calculates the specified percentile (continuous value) for a group (partition) based on the specified ORDER BY clause. It returns the value that represents the specified percentile within each partition (i.e., what the value ought to be).
 
-### <ins>PERCENTILE-DISC<ins>
-This function is used to calculate the discrete percentile value within a group (partition) based on the specified ordering. Unlike the PERCENTILE_CONT, it returns the actual value from the dataset that corresponds to the specified percentile.
+**PERCENTILE-DISC:** This function is used to calculate the discrete percentile value within a group (partition) based on the specified ordering. Unlike the PERCENTILE_CONT, it returns the actual value from the dataset that corresponds to the specified percentile.
 
 Off all the three categories of Percentile functions, only PERCENT_RANK can be found  in MySQL, the remaining categories including the PERCENT_RANK are found in MSSQL.
 
