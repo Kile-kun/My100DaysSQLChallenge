@@ -18,8 +18,8 @@ These operators are more effective for the Numerical Data Types (Numbers) which 
 ## DAY 4 (WHERE CLAUSE WITH ADVANCE OPERATORS)
 Another way to filter rows with WHERE condition is to use advanced operators like; the LIKE, BETWEEN, and IN operators. 
 The LIKE operator filters table rows by searching for a specified pattern in a column. There are two wildcards often used in conjunction with the LIKE operator:
-      **%-** Represents zero, one, or multiple characters.
-      **_:** Represents one, single character.
+      %- Represents zero, one, or multiple characters.
+      _: Represents one, single character.
 The IN-operator filters rows by returning only specified values separated by commas. It can also be used to compare a value to a subquery.
 The BETWEEN operator returns values within a specified range. 
 Unlike LIKE and IN operators which are used for Strings, and Mixed of Strings and Integers Respectively, The Between Operation is specifically meant for Numeric Data types.
@@ -32,20 +32,20 @@ The NOT operator returns rows that negate the conditions, it is attached to the 
 
 ## DAY 6 (STRING OPERATORS AND FUNCTIONS)
 To further perform operations on Columns with string data types, certain functions are used. They are very many with different purposes, but the most prominent among them include;
-    **CONCAT():** This joins (Concatenate) two or more columns together in a single string                    
-    **RIGHT():**  This extracts a substring from the right side of a string
-    **LEFT():** This returns a substring from the left side of a string.
-    **MID():** Extract certain substring from a specified center of a string
+    CONCAT(): This joins (Concatenate) two or more columns together in a single string                    
+    RIGHT():  This extracts a substring from the right side of a string
+    LEFT(): This returns a substring from the left side of a string.
+    MID(): Extract certain substring from a specified center of a string
 
 ## DAY 7 (GROUP BY AND AGGREGATE FUNCTIONS)
 The GROUP BY and ORDER BY are one of the most integral clauses in SQL as you are most likely going to use them in your everyday analysis. 
 The GROUP BY Clause is always applied to group rows with the same values as summary rows. This is often done to apply some sort of aggregate function to the data, such as 
 
-    **COUNT():** which Count the values of each row of similar items,
-    **MAX():** The Highest value of a grouped entity, 
-    **MIN():** The Lowest value of a grouped entity,
-    **SUM():** The addition of all values of the group, or
-    **AVG():** This is the Mean(Average) Value of the specified numerical values
+    COUNT(): which Count the values of each row of similar items,
+    MAX(): The Highest value of a grouped entity, 
+    MIN(): The Lowest value of a grouped entity,
+    SUM(): The addition of all values of the group, or
+    AVG(): This is the Mean(Average) Value of the specified numerical values
     of the group entity
 In Summary, The GROUP BY Clause always follows the Aggregate function in a QUERY.
 
@@ -53,8 +53,8 @@ In Summary, The GROUP BY Clause always follows the Aggregate function in a QUERY
 The ORDER BY clause has a sequential function for a table. It is used to rank items based on the Progression of Alphabetical Order, Values, Date, or User-Defined Sequence.
 By default, when added to a query, Rows are presented in Ascending Order. It is now left to the user to specify which order the query should return.
 The Limit (TOP N for MSSQL) Clause is used to restrict the number of rows returned by a SELECT query. It takes one or two arguments.
-    **a.** The first argument is the number of rows to return.
-    **b.** The second argument, if present, is the offset, which is the number of rows to skip before returning the first row.
+    a. The first argument is the number of rows to return.
+    b. The second argument, if present, is the offset, which is the number of rows to skip before returning the first row.
 It is also used with the WHERE or any other clauses to further filter results.
 
 ## DAY 9 (CASE STATEMENT)
@@ -62,33 +62,30 @@ The CASE statement is a conditional statement that allows you to execute differe
 It has two forms: 
 The simple CASE form is used when there is a need to execute different statements based on the value of a single expression. 
 
-     **a.** The searched CASE form is used when it is necessary to execute
-    different statements based on the value of a Boolean expression.
-     The CASE statement can also be used to;
-     **b.** Return different messages based on the value of an expression.
-    **c.** Categorize data into different groups.
-    **d.** Calculate different values based on the value of an expression.
+     1. The searched CASE form is used when it is necessary to execute different statements based on the value of a Boolean expression.
+          The CASE statement can also be used to;
+     2. Return different messages based on the value of an expression.
+     3. Categorize data into different groups.
+     4. Calculate different values based on the value of an expression.
 
 ## DAY 10 (DATE AND TIME EXTRACTIONS)
 In some of the previous days of this challenge, little attempt has been made to do the above. Cases like that of day 7 and day 9 where Month Name and Hour were extracted from order date and advert time respectively. 
 So, Date and time extractions are quite important to compare performance based on different elements of the date and time columns. Like comparing sales revenue for months, or days of the week, or comparing hourly traffic movement. 
 Unless otherwise stated, the DateTime format Is always in YYYY-MM-DD HH:MM:SS by default which all can be extracted individually by;
 
-     **1.** DATE(): Extracts the date from a date or DateTime value.
-     **2.** TIME(): Extracts the time from a date or DateTime value.
-     **3.** YEAR(): Extracts the year from a date or DateTime value.
-     **4.** MONTH()/MONTHNAME(): Extracts the month number (or month name) from a date or DateTime value.
-     **5.** DAY()/DAYNAME(): Extracts the day number (and day name) from a date or DateTime value.
-     **6.** HOUR(): Extracts hours of the day from DateTime or Time value.
+     1. DATE(): Extracts the date from a date or DateTime value.
+     2. TIME(): Extracts the time from a date or DateTime value.
+     3. YEAR(): Extracts the year from a date or DateTime value.
+     4. MONTH()/MONTHNAME(): Extracts the month number (or month name) from a date or DateTime value.
+     5. DAY()/DAYNAME(): Extracts the day number (and day name) from a date or DateTime value.
+     6. HOUR(): Extracts hours of the day from DateTime or Time value.
 
 ## DAY 11-20 PRACTICE QUESTION 
 I spent the next 10 days working on different case studies to solidify my proficiency in the basic SQL syntax. The resources I used include;
 
-     **1.** [Datalemur](https://datalemur.com/questions?category=SQL),
-     
-     **2.** [Stratascratch](https://platform.stratascratch.com/coding?code_type=3),
-     
-     **3.** [Hackerrank](https://www.hackerrank.com/domains/sql?filters%5Bsubdomains%5D%5B%5D=select).
+     1. [Datalemur](https://datalemur.com/questions?category=SQL),
+     2. [Stratascratch](https://platform.stratascratch.com/coding?code_type=3),
+     3. [Hackerrank](https://www.hackerrank.com/domains/sql?filters%5Bsubdomains%5D%5B%5D=select).
 
 
 
@@ -97,11 +94,11 @@ I spent the next 10 days working on different case studies to solidify my profic
 Percentile from statistics is used to explain how a value compares to the entire values of a population. It is normally expressed in whole numbers between 0 and 100. It has no universal definition but expresses the percentage of numbers below the value. If for example, a student's exam score is the 75th percentile, it means he scores rank above 75% of the class.
 In the context of SQL, the percentile function is of three types depending on what we aim to achieve.
 
-  **PERCENT_RANK:** This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
+  PERCENT_RANK: This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
 
-  **PERCENTILE-CONT:** This function calculates the specified percentile (continuous value) for a group (partition) based on the specified ORDER BY clause. It returns the value representing the specified percentile within each partition (i.e., what the value should be).
+  PERCENTILE-CONT: This function calculates the specified percentile (continuous value) for a group (partition) based on the specified ORDER BY clause. It returns the value representing the specified percentile within each partition (i.e., what the value should be).
 
-  **PERCENTILE-DISC:** This function is used to calculate the discrete percentile value within a group (partition) based on the specified ordering. Unlike the PERCENTILE_CONT, it returns the actual value from the dataset that corresponds to the specified percentile.
+  PERCENTILE-DISC: This function is used to calculate the discrete percentile value within a group (partition) based on the specified ordering. Unlike the PERCENTILE_CONT, it returns the actual value from the dataset that corresponds to the specified percentile.
 
 Off all the three categories of Percentile functions, only PERCENT_RANK can be found in MySQL, the remaining categories including the PERCENT_RANK are found in MSSQL.
 
