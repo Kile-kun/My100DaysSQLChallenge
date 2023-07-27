@@ -27,7 +27,7 @@ The BETWEEN operator returns values within a specified range.
 Unlike LIKE and IN operators which are used for Strings, and Mixed of Strings and Integers Respectively, The Between Operation is specifically meant for Numeric Data types.
 
 ## DAY 5 (AND, OR & NOT OPERATORS)
-In situations where there is a need to combine multiple conditions in a query, The AND-OR-NOT operators are attached to join the conditions of the WHERE Clauses. 
+When there is a need to combine multiple conditions in a query, The AND-OR-NOT operators are attached to join the conditions of the WHERE Clauses. 
 The AND operator returns rows that meet all the conditions,
 The OR operator returns rows that meet any of the conditions,
 The NOT operator returns rows that negate the conditions, it is attached to the ADVANCED OPERATORS (we discussed in DAY 4).
@@ -41,7 +41,7 @@ To further perform operations on Columns with string data types, certain functio
 
 ## DAY 7 (GROUP BY AND AGGREGATE FUNCTIONS)
 The GROUP BY and ORDER BY are one of the most integral clauses in SQL as you are most likely going to use them in your everyday analysis. 
-The GROUP BY Clause is always applied to group rows that have the same values as summary rows. This is often done to apply some sort of aggregate function to the data, such as 
+The GROUP BY Clause is always applied to group rows with the same values as summary rows. This is often done to apply some sort of aggregate function to the data, such as 
     **COUNT():** which Count the values of each row of similar items,
     **MAX():** The Highest value of a grouped entity, 
     **MIN():** The Lowest value of a grouped entity,
@@ -64,7 +64,7 @@ It has two forms:
 The simple CASE form is used when there is a need to execute different statements based on the value of a single expression. 
     **a.** The searched CASE form is used when it is necessary to execute
     different statements based on the value of a Boolean expression.
-     The CASE statement can also be used to.
+     The CASE statement can also be used to;
     **b.** Return different messages based on the value of an expression.
     **c.** Categorize data into different groups.
     **d.** Calculate different values based on the value of an expression.
@@ -72,7 +72,7 @@ The simple CASE form is used when there is a need to execute different statement
 
 
 ## DAY 40 (PERCENTILE OF CONTINUOUS VALUE FUNCTION)
-Percentile from statistics is used to explain how a value compares to the entire values of a population. It is normally expressed in whole numbers between 0 and 100. It has no universal definition but is used to express the percentage of numbers below the value. If for example, a student's exam score is the 75th percentile, it means he scores rank above 75% of the class.
+Percentile from statistics is used to explain how a value compares to the entire values of a population. It is normally expressed in whole numbers between 0 and 100. It has no universal definition but expresses the percentage of numbers below the value. If for example, a student's exam score is the 75th percentile, it means he scores rank above 75% of the class.
 In the context of SQL, the percentile function is of three types depending on what we aim to achieve.
 
   **PERCENT_RANK:** This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
@@ -86,5 +86,15 @@ Off all the three categories of Percentile functions, only PERCENT_RANK can be f
 ## DAY 41 (AGGREGATE FUNCTIONS WITHIN WINDOW FUNCTIONS)
 If you observe in the previous days when I had to write queries to explain the different elements of window functions, there have been scenarios where there was the need to use AGGREGATE FUNCTIONS to drive the explanations further. 
 Handling aggregate functions within window functions is a powerful capability in SQL that allows you to perform complex calculations and aggregate results over defined partitions or groups. When using aggregate functions like SUM(), AVG(), and COUNT() within window functions, you can create more insightful and detailed analyses of your data.
+
+## DAY 42 (USING WHERE CLAUSES ON WINDOW FUNCTIONS)
+it is practically impossible to directly use a WHERE clause on window function results. This setback is normally encountered because at the time the WHERE clause is being used, the window functions won’t have been computed yet. 
+An example of such a scenario is; trying to retrieve the top-performing product per month for a particular year by just passing using “WHERE WINDOW_FUNCTION = 1;”. In this scenario, the error it normally throws in is the 
+“Error Code: 3593. You cannot use the window function 'row_number' in this context.”
+Ways to prevent this scenario is to either use a SUBQUERY or the COMMON TABLE EXPRESSION. 
+The SUBQUERY method will be used today, the COMMON TABLE EXPRESSION method will be treated as a separate topic tomorrow.
+
+
+
 
 
