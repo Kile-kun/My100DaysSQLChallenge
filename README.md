@@ -71,6 +71,7 @@ The simple CASE form is used when there is a need to execute different statement
 In some of the previous days of this challenge, little attempt has been made to do the above. Cases like that of day 7 and day 9 where Month Name and Hour were extracted from order date and advert time respectively. 
 So, Date and time extractions are quite important to compare performance based on different elements of the date and time columns. Like comparing sales revenue for months, or days of the week, or comparing hourly traffic movement. 
 Unless otherwise stated, the DateTime format Is always in YYYY-MM-DD HH:MM:SS by default which all can be extracted individually by;
+
      **a.** DATE(): Extracts the date from a date or DateTime value.
      **b.** TIME(): Extracts the time from a date or DateTime value.
      **c.** YEAR(): Extracts the year from a date or DateTime value.
@@ -80,8 +81,11 @@ Unless otherwise stated, the DateTime format Is always in YYYY-MM-DD HH:MM:SS by
 
 ## DAY 11-20 PRACTICE QUESTION 
 I spent the next 10 days working on different case studies to solidify my proficiency in the basic SQL syntax. The resources I used include;
+
      **a.** [Datalemur](https://datalemur.com/questions?category=SQL),
+     
      **b.** [Stratascratch](https://platform.stratascratch.com/coding?code_type=3),
+     
      **c.** [Hackerrank](https://www.hackerrank.com/domains/sql?filters%5Bsubdomains%5D%5B%5D=select).
 
 
