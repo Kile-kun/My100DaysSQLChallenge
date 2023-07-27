@@ -18,43 +18,43 @@ These operators are more effective for the Numerical Data Types (Numbers) which 
 ## DAY 4 (WHERE CLAUSE WITH ADVANCE OPERATORS)
 Another way to filter rows with WHERE condition is to use advanced operators like; the LIKE, BETWEEN, and IN operators. 
 The LIKE operator filters table rows by searching for a specified pattern in a column. There are two wildcards often used in conjunction with the LIKE operator:
-      %- Represents zero, one, or multiple characters.
-      _: Represents one, single character.
+      1. %- Represents zero, one, or multiple characters.
+      2. _: Represents one, single character.
 The IN-operator filters rows by returning only specified values separated by commas. It can also be used to compare a value to a subquery.
 The BETWEEN operator returns values within a specified range. 
 Unlike LIKE and IN operators which are used for Strings, and Mixed of Strings and Integers Respectively, The Between Operation is specifically meant for Numeric Data types.
 
 ## DAY 5 (AND, OR & NOT OPERATORS)
 When there is a need to combine multiple conditions in a query, The AND-OR-NOT operators are attached to join the conditions of the WHERE Clauses. 
-The AND operator returns rows that meet all the conditions,
-The OR operator returns rows that meet any of the conditions,
-The NOT operator returns rows that negate the conditions, it is attached to the ADVANCED OPERATORS (we discussed in DAY 4).
+      1. The AND operator returns rows that meet all the conditions,
+      2. The OR operator returns rows that meet any of the conditions,
+      3. The NOT operator returns rows that negate the conditions, it is attached to the ADVANCED OPERATORS (we discussed in DAY 4).
 
 ## DAY 6 (STRING OPERATORS AND FUNCTIONS)
 To further perform operations on Columns with string data types, certain functions are used. They are very many with different purposes, but the most prominent among them include;
-    CONCAT(): This joins (Concatenate) two or more columns together in a single string                    
-    RIGHT():  This extracts a substring from the right side of a string
-    LEFT(): This returns a substring from the left side of a string.
-    MID(): Extract certain substring from a specified center of a string
+    1. CONCAT(): This joins (Concatenate) two or more columns together in a single string                    
+    2. RIGHT():  This extracts a substring from the right side of a string
+    3. LEFT(): This returns a substring from the left side of a string.
+    4. MID(): Extract certain substring from a specified center of a string
 
 ## DAY 7 (GROUP BY AND AGGREGATE FUNCTIONS)
 The GROUP BY and ORDER BY are one of the most integral clauses in SQL as you are most likely going to use them in your everyday analysis. 
 The GROUP BY Clause is always applied to group rows with the same values as summary rows. This is often done to apply some sort of aggregate function to the data, such as 
 
-    COUNT(): which Count the values of each row of similar items,
-    MAX(): The Highest value of a grouped entity, 
-    MIN(): The Lowest value of a grouped entity,
-    SUM(): The addition of all values of the group, or
-    AVG(): This is the Mean(Average) Value of the specified numerical values
-    of the group entity
+    1. COUNT(): which Count the values of each row of similar items,
+    2. MAX(): The Highest value of a grouped entity, 
+    3. MIN(): The Lowest value of a grouped entity,
+    4. SUM(): The addition of all values of the group, or
+    5. AVG(): This is the Mean(Average) Value of the specified numerical values of the group entity
 In Summary, The GROUP BY Clause always follows the Aggregate function in a QUERY.
 
 ## DAY 8 (ORDER BY AND LIMIT (TOP N) CLAUSE)
 The ORDER BY clause has a sequential function for a table. It is used to rank items based on the Progression of Alphabetical Order, Values, Date, or User-Defined Sequence.
 By default, when added to a query, Rows are presented in Ascending Order. It is now left to the user to specify which order the query should return.
 The Limit (TOP N for MSSQL) Clause is used to restrict the number of rows returned by a SELECT query. It takes one or two arguments.
-    a. The first argument is the number of rows to return.
-    b. The second argument, if present, is the offset, which is the number of rows to skip before returning the first row.
+
+    1. The first argument is the number of rows to return.
+    2. The second argument, if present, is the offset, which is the number of rows to skip before returning the first row.
 It is also used with the WHERE or any other clauses to further filter results.
 
 ## DAY 9 (CASE STATEMENT)
@@ -87,6 +87,32 @@ I spent the next 10 days working on different case studies to solidify my profic
      2. [Stratascratch](https://platform.stratascratch.com/coding?code_type=3),
      3. [Hackerrank](https://www.hackerrank.com/domains/sql?filters%5Bsubdomains%5D%5B%5D=select).
 
+## DAY 21 (UNION AND HAVING STATEMENT)
+Before I start with the intermediate section of the challenge, I want to quickly treat the statements I omitted in the basic section. I use them on 2 different occasions during the practice. They are the 
+UNION Statement – This Statement is used to combine different queries into a single query. A perfect example is the query that returns a table's top N and bottom 3 N in a single dataset. 
+
+HAVING Statement – Having statement is a conditional statement always attached to a GROUP BY statement to filter the results of a query based on aggregate conditions. It works similarly to the WHERE function which is to filter results. The differences include;
+
+      1. Where Statement is attached to the SELECT FROM Statement While The HAVING Statement is always attached to the GROUP BY Statement,
+      2. WHERE Statement Filter by rows of a dataset, While HAVING Filter by Aggregates of a Group of a Dataset,
+      3. In Order of Arrangement of Queries, WHERE comes before HAVING.
+
+## DAY 22 SQL JOINS
+As far as Database is concerned and the concept of Normalization is to be obeyed, Queries that join multiple tables will always be needed. 
+For Proper Context, Database normalization is a process of organizing data in a database to reduce redundancy and improve data integrity. It is a systematic approach to dividing tables into smaller tables and linking them using relationships.
+SQL Join is that clause that returns data from multiple tables based on a common column. It helps combine rows or columns for different based on a common field between them. 
+**NB** The important point to note is that to make meaning out of the tables, both must contain a common field (A Primary or Foreign key) between them.
+
+## DAY 23 TYPES OF JOINS
+In continuation of the concept of the join clause, there are different types of Joins in SQL. The type to use is dependent on the result we are expecting. The types include.
+
+      1. INNER JOIN- This is the most used of the types, it returns only matching records from the selected table.
+      2. OUTER JOIN- This clause returns every record of the selected table (regardless of whether they match or not). They are further divided into.
+      3. LEFT OUTER JOIN OR LEFT JOIN- This returns all matching records from all specified tables including the entire records of the left table.
+      4. RIGHT OUTER JOIN OR RIGHT JOIN- It returns matching records from all specified tables including the entire records of the right table.
+      5. SELF JOIN- This clause, though not really used (because of its normalization deficiency), is used to join a table with itself. 
+      6. CROSS JOIN- Also called CARTESIAN JOIN is used to return all possible combinations of rows between specified tables. Unlike other types, it doesn’t need a matching column to 
+          work.
 
 
 
@@ -94,11 +120,11 @@ I spent the next 10 days working on different case studies to solidify my profic
 Percentile from statistics is used to explain how a value compares to the entire values of a population. It is normally expressed in whole numbers between 0 and 100. It has no universal definition but expresses the percentage of numbers below the value. If for example, a student's exam score is the 75th percentile, it means he scores rank above 75% of the class.
 In the context of SQL, the percentile function is of three types depending on what we aim to achieve.
 
-  PERCENT_RANK: This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
+  1. PERCENT_RANK: This function is like that of CUME_DIST (). It calculates the relative rank of the current row within the result set. However, unlike CUME_DIST (), which returns a value from 0 to 1, PERCENT_RANK () returns a value from 0 to 1 inclusive, indicating the relative position of the current row concerning the total number of rows in the partition.
 
-  PERCENTILE-CONT: This function calculates the specified percentile (continuous value) for a group (partition) based on the specified ORDER BY clause. It returns the value representing the specified percentile within each partition (i.e., what the value should be).
+  2. PERCENTILE-CONT: This function calculates the specified percentile (continuous value) for a group (partition) based on the specified ORDER BY clause. It returns the value representing the specified percentile within each partition (i.e., what the value should be).
 
-  PERCENTILE-DISC: This function is used to calculate the discrete percentile value within a group (partition) based on the specified ordering. Unlike the PERCENTILE_CONT, it returns the actual value from the dataset that corresponds to the specified percentile.
+  3. PERCENTILE-DISC: This function is used to calculate the discrete percentile value within a group (partition) based on the specified ordering. Unlike the PERCENTILE_CONT, it returns the actual value from the dataset that corresponds to the specified percentile.
 
 Off all the three categories of Percentile functions, only PERCENT_RANK can be found in MySQL, the remaining categories including the PERCENT_RANK are found in MSSQL.
 
