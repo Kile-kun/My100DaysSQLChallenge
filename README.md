@@ -140,7 +140,7 @@ Ways to prevent this scenario is to either use a SUBQUERY or the COMMON TABLE EX
 The SUBQUERY method will be used today, the COMMON TABLE EXPRESSION method will be treated as a separate topic tomorrow.
 
 ## DAY 43 (COMMON TABLE EXPRESSION)
-I wrote an article (titled: (SQL Query best practices)[https://medium.com/@rajibabatunde/sql-queries-best-practices-1bdf77148bf3]) on the importance of writing efficient and readable queries. This singular art helps save processing time for our queries. Common Table Expression (Popularly called CTE) is an important aspect of SQL to master to achieve the art of writing efficient SQL queries.
+I wrote an article (titled: [SQL Query best practices](https://medium.com/@rajibabatunde/sql-queries-best-practices-1bdf77148bf3)) on the importance of writing efficient and readable queries. This singular art helps save processing time for our queries. Common Table Expression (Popularly called CTE) is an important aspect of SQL to master to achieve the art of writing efficient SQL queries.
 CTEs are temporary named result sets that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement. They allow you to break down complex queries into smaller, more manageable parts, making it easier to understand and maintain your code.
 They are used mostly in place of SUBQUERIES. 
 Benefits of CTEs include;
