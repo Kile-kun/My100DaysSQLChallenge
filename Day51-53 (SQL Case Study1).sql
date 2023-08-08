@@ -1,4 +1,4 @@
--- DANNYS DINER PROJECT
+-- Day51-53 (SQL Case Study1) DANNY'S DINNER
 -- Database Setup
 	-- Create Database
 DROP DATABASE IF EXISTS dannys_diner;
@@ -60,7 +60,8 @@ RIGHT JOIN sales sl
 ON mm.customer_id = sl.customer_id
 RIGHT JOIN menu mn
 ON sl.product_id = mn.product_id
-GROUP BY sl.customer_id;
+GROUP BY sl.customer_id
+ORDER BY sl.customer_id;
 
 -- How many days has each customer visited the restaurant?
 SELECT customer_id, COUNT(order_date) AS days_visited
@@ -69,7 +70,7 @@ GROUP BY customer_id;
 
 -- What was the first item from the menu purchased by each customer?
 WITH item_order_cte AS
-					(SELECT sl.customer_id, sl.order_date, mn.product_name,
+					(SELECT DISTINCT sl.customer_id, sl.order_date, mn.product_name ,
 							DENSE_RANK() OVER (PARTITION BY sl.customer_id ORDER BY sl.order_date ASC) AS date_order_rnk
 					FROM sales sl 
 					LEFT JOIN menu mn
@@ -122,7 +123,7 @@ WITH mmb_purc_cte AS(SELECT mm.customer_id, mm.join_date, mn.product_name, sl.or
 					LEFT JOIN menu mn
 					ON sl.product_id = mn.product_id
 					WHERE sl.order_date < mm.join_date)
-SELECT customer_id, product_name
+SELECT DISTINCT customer_id, product_name
 FROM mmb_purc_cte
 WHERE membr_purc_rank =1;
 
