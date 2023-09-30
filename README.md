@@ -114,6 +114,20 @@ In continuation of the concept of the join clause, there are different types of 
       6. CROSS JOIN- Also called CARTESIAN JOIN is used to return all possible combinations of rows between specified tables. Unlike other types, it doesn’t need a matching column to 
           work.
 
+## DAY 35 (WINDOW FUNCTION)
+Window functions are a powerful feature in SQL that allows us to perform calculations across a "window" of rows related to the current row, without altering the result set.
+They are a game-changer when it comes to data analysis and reporting, making complex tasks seem like a breeze!
+
+Importance of Window Functions?
+Window functions enable us to gain deeper insights into our data by computing aggregated results, ranking, lead/lag comparisons, and more – all in a single query!
+
+      1. Ideal Situations Window Functions used include;
+      2. Calculating Running Totals or Running Averages,
+      3. Ranking and Top-N Queries
+      4. Finding Differences between Current and Previous Rows,
+      5. Calculating Percentiles or Cumulative Distribution,
+      6. Handling Aggregate Results within Groups.
+
 
 
 ## DAY 40 (PERCENTILE OF CONTINUOUS VALUE FUNCTION)
